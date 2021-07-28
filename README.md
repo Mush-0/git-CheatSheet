@@ -56,4 +56,19 @@ Adding new lines :)
 ### git move
 
 7. git mv <-old path-> <-new path-> (moves the named file to other location with diff name if needed: `git mv myPic.jpg imgs/pic1.png`)
+
    1. Easier to use explorer to move and delete then use `$git add -A .`
+   <hr>
+
+### git branch
+
+8.  git branch <-name-> (Creates new branch with provided name)
+
+    1. git branch -d <-name-> (Deletes the branch)
+    2. git checkout <-name-> (switch to diff branch to work on)
+
+    <hr>
+
+### git ignore
+
+9. git ls-files --others --ignored --exclude-standard (to see ignored files from .gitignore)<hr>
