@@ -1,0 +1,7 @@
+
+# ignore anything ending with .log
+*.log
+# don't ignore audit.log (must be put in sub-directory???)
+!audit.log
+# to know which files are ignored
+# git ls-files --others --ignored --exclude-standard
