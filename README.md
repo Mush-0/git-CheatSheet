@@ -62,12 +62,36 @@ Adding new lines :)
 
 ### git branch
 
-8.  git branch <-name-> (Creates new branch with provided name)
+8.  git branch (Show all branches)
 
+    1. git branch <-branch name-> (Creates new branch with provided name)
+    1. git checkout -b <-branch name-> (Creates new branch and switch to it)
     1. git branch -d <-name-> (Deletes the branch)
-    2. git checkout <-name-> (switch to diff branch to work on)
-
+    1. git checkout <-name-> (switch to diff branch to work on)
+    1. git checkout -- <-file-name-> (replace that file with same from last commit)
     <hr>
+
+### git merge
+
+9. git merge <-name-> (Follow steps below 1~4)
+   1. git checkout <-name-> (Navigate to the branch u will merge into)
+   2. git branch (To see all branch names)
+   3. git merge <-name-> (merge the named branch into the branch u checked into in step1)
+   4. git branch -d <-name-> (Delete the branch that was merged because it's a duplicate now)
+10. If u got merge conflict u need to use (git status) to see what is causing the conflict, solve it manually, then (git add fileName) and finally (git commit)
+    1. If u want to abort and solve conflict later (git merge --abort)
+11. git merge --squash <-target branch-> (merge branches and use target branch history only: `Wont merge both history(commits)`)<hr>
+
+### git remote
+
+10. git remote (Send and recieve data from url aka `github`)
+    1. git remote add origin <-github url-> (Add origin to github.com?)
+    2. git remote set-url origin <-other github url-> (Changes the github url)
+    3. git remote rm origin (Removes the remote from github)
+    4. git remote -v (Shows the urls in the working space)
+11. git fetch origin (Goes to github and fetch)
+12. git pull origin (combo of fetch/merge: `it goes to github, fetch data, and merge github branch with the one currently we checked into`)
+13. git push origin (Pushes the data to github from PC)
 
 ### git ignore
 
