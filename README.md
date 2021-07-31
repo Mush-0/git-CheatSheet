@@ -1,11 +1,3 @@
-# hello-world
-
-Learning what is Github
-
-git start
-
-Adding new lines :)
-
 # commands of Git/github
 
 ### git add
@@ -69,6 +61,7 @@ Adding new lines :)
     1. git branch -d <-name-> (Deletes the branch)
     1. git checkout <-name-> (switch to diff branch to work on)
     1. git checkout -- <-file-name-> (replace that file with same from last commit)
+    1. git checkout <638ee7> <-newName-> (grab that file from history with <-specified hash-> and rename it then puts it in current working space)
     <hr>
 
 ### git merge
@@ -84,15 +77,36 @@ Adding new lines :)
 
 ### git remote
 
-10. git remote (Send and recieve data from url aka `github`)
+12. git remote (Send and recieve data from url aka `github`)
     1. git remote add origin <-github url-> (Add origin to github.com?)
     2. git remote set-url origin <-other github url-> (Changes the github url)
     3. git remote rm origin (Removes the remote from github)
     4. git remote -v (Shows the urls in the working space)
-11. git fetch origin (Goes to github and fetch)
-12. git pull origin (combo of fetch/merge: `it goes to github, fetch data, and merge github branch with the one currently we checked into`)
-13. git push origin (Pushes the data to github from PC)
+13. git fetch origin (Goes to github and fetch)
+14. git pull origin (combo of fetch/merge: `it goes to github, fetch data, and merge github branch with the one currently we checked into`)
+15. git push origin (Pushes the data to github from PC)<hr>
+
+### git reset [Examples](https://devconnected.com/how-to-undo-last-git-commit/)
+
+16. git reset HEAD <-fileName-> (go back in history the default `1 log` and unstage files in that commit **WITHOUT** modifying working space)
+    1. git reset --soft HEAD~5 (go back in history 5 log commits **WITHOUT** changing files modified in them in working space)
+    1. git reset --hard HEAD~3 (go back in history 3 commits and **DELETE** the changes made in these commits from working space and staging~`CAREFUL`~)
+    1. git revert HEAD (Sees what was that commit in history `HEAD` and makes a new commit at end of log which is before it)
+    1. git checkout <638ee7> <-newName-> (grab that file from history with <-specified hash-> and rename it then puts it in current working space)
+    <hr>
+
+### git reflog
+
+17. git reflog (Shows a log with **EVERYTHING** including checkouts/resets/merging... so u can reset to specific position in history)
+
+1. gitk (Need further search, but it's used to show graphical log)<hr>
+
+### git rebase
+
+19. git rebase <-master-> (Move the whole **`checked in`** branch with its history after latest commit in the target branch: master in this case)
+    1. git checkout <-branch-> (use it first)
+    <hr>
 
 ### git ignore
 
-9. git ls-files --others --ignored --exclude-standard (to see ignored files from .gitignore)<hr>
+16. git ls-files --others --ignored --exclude-standard (to see ignored files from .gitignore)<hr>
