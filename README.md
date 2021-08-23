@@ -54,7 +54,7 @@
 
 ### git branch
 
-8.  git branch (Show all branches)
+8.  git branch -a (Show all branches, -a to show even the branches from remote git repo)
 
     1. git branch <-branch name-> (Creates new branch with provided name)
     1. git checkout -b <-branch name-> (Creates new branch and switch to it)
